@@ -1,20 +1,9 @@
-/*
- *
- * akshay sharma 
- * fxn769@gmail.com
- * 5/7/2020
- * 
- */
-
 var socialtags = [{
     img: "img/github.svg",
     link: "https://github.com/satriawarn"
 }, {
     img: "img/linkedin.svg",
     link: "https://www.linkedin.com/in/eriksatriawan/"
-}, {
-    img: "img/twitter.svg",
-    link: "https://twitter.com/satriawarn"
 }]
 
 function loadSocialIcons() {
