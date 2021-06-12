@@ -149,3 +149,55 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// ============================SEND EMAIL=================================
+function validate() {
+    let name = document.getElementById("Name");
+    let email = document.getElementById("Email");
+    let subject = document.getElementById("Subject");
+    let msg = document.getElementById("Message");
+    let btn = document.getElementById("submit");
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (name.value == "" || email.value == "" || subject.value =="" || msg.value == "") {
+        emptyerror();
+      } else {
+        sendEmail(name.value, email.value, subject.value, msg.value);
+        success();
+      }
+    });
+  }
+  validate();
+
+function sendEmail(name, email, subject, msg){
+    emailjs.send("service_rp4pjom", "template_e4tgspk", {
+        to_name : "satriawarn@gmail.com",
+        from_name : name+" "+email,
+        message : "Subject "+subject+"; Message "+msg
+    });
+}
+
+function emptyerror() {
+    swal({
+      type: "warning",
+      title: "Oops...",
+      text: "Fields cannot be empty!",
+    });
+}
+
+function error() {
+    swal({
+      title: "Oops...",
+      type: "error",
+      text: "Something went wrong!",
+    });
+}
+
+function success() {
+    swal({
+      title: "Success...",
+      type: "success",
+      text: "Successfully sent message",
+    });
+}

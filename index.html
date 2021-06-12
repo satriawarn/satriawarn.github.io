@@ -16,6 +16,9 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- ==================== SWEETALERT JS ====================-->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
     <title>Eric Satriawan</title>
     <link href="assets/img/browsing.png" rel="shortcut icon" />
 </head>
@@ -529,30 +532,30 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__from grid">
+                    <form method="POST" action="" class="contact__from grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <input type="text" name="Name" id="Name" class="contact__input">
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <input type="email" name="Name" id="Email" class="contact__input">
                             </div>
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" name="Subject "id="Subject" class="contact__input">
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea name="Message" id="Message" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
 
                         <div>
-                            <a href="#" class="button button--flex">
+                            <a href="#" id="submit" class="button button--flex">
                                 Send Message
                                 <i class="uil uil-message button__icon"></i>
                             </a>
@@ -606,6 +609,17 @@
 
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- ==================== SWEETALERT JS ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+    <!-- ==================== EMAIL JS ====================-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+                (function() {
+                    emailjs.init("user_NMcWgvfXf9NqaUUoK0mUM");
+                })();
+    </script>
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
