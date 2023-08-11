@@ -1,7 +1,7 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
-    "namespace": "android_app",
+    "namespace": "jp.com.doreme",
     "package_name": "jp.com.doreme",
     "sha256_cert_fingerprints":
     ["BF:AF:05:5F:E9:0A:17:40:4F:5D:10:B0:BD:C8:33:5A:2F:85:ED:D2:EB:A9:68:F9:07:BF:35:69:13:53:00:9D"]
