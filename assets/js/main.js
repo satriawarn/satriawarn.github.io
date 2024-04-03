@@ -82,20 +82,21 @@ let swiper = new Swiper(".portfolio__container", {
   },
 });
 
-var thumbnail = document.getElementsByClassName("thumbnail")[0];
-var popup = document.getElementsByClassName("popup")[0];
+function openPopup() {
+  var popup = document.getElementById("imagePopup");
+  var popupImg = document.getElementById("popupImg");
 
-var popupImg = document.getElementById("popupImg");
+  // Set the source of the popup image to the clicked thumbnail
+  var thumbnailSrc = document.querySelector(".thumbnail").getAttribute("src");
+  popupImg.src = thumbnailSrc;
 
-thumbnail.onmouseover = function () {
-  popupImg.src = this.src;
-};
-
-thumbnail.onclick = function () {
+  // Show the popup
   popup.style.display = "block";
-};
+}
 
 function closePopup() {
+  var popup = document.getElementById("imagePopup");
+  // Hide the popup
   popup.style.display = "none";
 }
 
