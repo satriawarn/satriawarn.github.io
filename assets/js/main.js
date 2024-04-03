@@ -82,6 +82,29 @@ let swiper = new Swiper(".portfolio__container", {
   },
 });
 
+// Get the thumbnail image and popup
+var thumbnail = document.getElementsByClassName("thumbnail")[0];
+var popup = document.getElementsByClassName("popup")[0];
+
+// Get the popup content (image)
+var popupImg = document.getElementById("popupImg");
+
+// When the user hovers over the thumbnail image, display the larger version in the popup
+thumbnail.onmouseover = function() {
+    popupImg.src = this.src;
+}
+
+// When the user clicks on the thumbnail image, display the popup
+thumbnail.onclick = function() {
+    popup.style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+    popup.style.display = "none";
+}
+
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll("section[id]");
 

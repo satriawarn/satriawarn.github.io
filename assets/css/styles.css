@@ -398,6 +398,7 @@ img{
 
 .about__description{
     text-align: center;
+    margin-top: var(--mb-2-5);
     margin-bottom: var(--mb-2-5);
 }
 
@@ -895,7 +896,7 @@ img{
         justify-self: center;
     } 
 
-    .about__container,
+    /* .about__container, */
     .skills__container,
     .portfolio__content,
     .project__container,
@@ -1120,3 +1121,57 @@ img{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.popup-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
