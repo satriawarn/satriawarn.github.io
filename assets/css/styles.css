@@ -613,8 +613,8 @@ img{
 
 .portfolio__img:hover{
     cursor: pointer;
-    transition: 0.5s all ease-in-out;
-    transform: scale(1.5);
+    /* transition: transform 0.3s ease-in-out;
+    transform: scale(1.1); */
 }
 
 .portfolio__title{
@@ -1165,13 +1165,15 @@ img{
 }
 
 .thumbnail {
-    width: 200px;
+    width: 265px;
     height: auto;
-    transition: transform 0.3s ease-in-out;
+    width: 320px;
+    border-radius: .5rem;
+    /* transition: transform 0.3s ease-in-out; */
 }
 
 .thumbnail:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     cursor: pointer;
 }
 
